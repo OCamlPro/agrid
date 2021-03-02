@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="../coverage.css" />
+    <script src="../highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="../index.html">
+          <span class="dirname">src/</span>grid.ml
+        </a>
+      </h1>
+      <h2>89.83%</h2>
+    </div>
+    <div id="navbar">
+      <span class="some-visited" style="bottom:40.54%"></span>
+      <span class="some-visited" style="bottom:36.04%"></span>
+      <span class="unvisited" style="bottom:4.50%"></span>
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span class="visited"> </span>
+<a id="L16"></a><span > </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span class="visited"> </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span > </span>
+<a id="L21"></a><span > </span>
+<a id="L22"></a><span class="visited"> </span>
+<a id="L23"></a><span class="visited"> </span>
+<a id="L24"></a><span class="visited"> </span>
+<a id="L25"></a><span > </span>
+<a id="L26"></a><span > </span>
+<a id="L27"></a><span > </span>
+<a id="L28"></a><span class="visited"> </span>
+<a id="L29"></a><span class="visited"> </span>
+<a id="L30"></a><span > </span>
+<a id="L31"></a><span > </span>
+<a id="L32"></a><span > </span>
+<a id="L33"></a><span class="visited"> </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span > </span>
+<a id="L36"></a><span > </span>
+<a id="L37"></a><span class="visited"> </span>
+<a id="L38"></a><span > </span>
+<a id="L39"></a><span > </span>
+<a id="L40"></a><span > </span>
+<a id="L41"></a><span > </span>
+<a id="L42"></a><span > </span>
+<a id="L43"></a><span > </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
+<a id="L46"></a><span class="visited"> </span>
+<a id="L47"></a><span > </span>
+<a id="L48"></a><span > </span>
+<a id="L49"></a><span > </span>
+<a id="L50"></a><span class="visited"> </span>
+<a id="L51"></a><span > </span>
+<a id="L52"></a><span > </span>
+<a id="L53"></a><span > </span>
+<a id="L54"></a><span class="visited"> </span>
+<a id="L55"></a><span class="visited"> </span>
+<a id="L56"></a><span class="visited"> </span>
+<a id="L57"></a><span > </span>
+<a id="L58"></a><span > </span>
+<a id="L59"></a><span class="visited"> </span>
+<a id="L60"></a><span > </span>
+<a id="L61"></a><span > </span>
+<a id="L62"></a><span class="visited"> </span>
+<a id="L63"></a><span > </span>
+<a id="L64"></a><span > </span>
+<a id="L65"></a><span > </span>
+<a id="L66"></a><span class="some-visited"> </span>
+<a id="L67"></a><span class="visited"> </span>
+<a id="L68"></a><span > </span>
+<a id="L69"></a><span > </span>
+<a id="L70"></a><span > </span>
+<a id="L71"></a><span class="some-visited"> </span>
+<a id="L72"></a><span class="visited"> </span>
+<a id="L73"></a><span > </span>
+<a id="L74"></a><span > </span>
+<a id="L75"></a><span class="visited"> </span>
+<a id="L76"></a><span > </span>
+<a id="L77"></a><span > </span>
+<a id="L78"></a><span class="visited"> </span>
+<a id="L79"></a><span > </span>
+<a id="L80"></a><span > </span>
+<a id="L81"></a><span class="visited"> </span>
+<a id="L82"></a><span > </span>
+<a id="L83"></a><span > </span>
+<a id="L84"></a><span class="visited"> </span>
+<a id="L85"></a><span > </span>
+<a id="L86"></a><span > </span>
+<a id="L87"></a><span > </span>
+<a id="L88"></a><span > </span>
+<a id="L89"></a><span > </span>
+<a id="L90"></a><span class="visited"> </span>
+<a id="L91"></a><span > </span>
+<a id="L92"></a><span > </span>
+<a id="L93"></a><span > </span>
+<a id="L94"></a><span class="visited"> </span>
+<a id="L95"></a><span > </span>
+<a id="L96"></a><span > </span>
+<a id="L97"></a><span > </span>
+<a id="L98"></a><span class="visited"> </span>
+<a id="L99"></a><span > </span>
+<a id="L100"></a><span > </span>
+<a id="L101"></a><span > </span>
+<a id="L102"></a><span class="visited"> </span>
+<a id="L103"></a><span > </span>
+<a id="L104"></a><span > </span>
+<a id="L105"></a><span > </span>
+<a id="L106"></a><span class="unvisited"> </span>
+<a id="L107"></a><span > </span>
+<a id="L108"></a><span > </span>
+<a id="L109"></a><span > </span>
+<a id="L110"></a><span class="visited"> </span>
+<a id="L111"></a><span class="visited"> </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1">  1</a>
+<a href="#L2">  2</a>
+<a href="#L3">  3</a>
+<a href="#L4">  4</a>
+<a href="#L5">  5</a>
+<a href="#L6">  6</a>
+<a href="#L7">  7</a>
+<a href="#L8">  8</a>
+<a href="#L9">  9</a>
+<a href="#L10"> 10</a>
+<a href="#L11"> 11</a>
+<a href="#L12"> 12</a>
+<a href="#L13"> 13</a>
+<a href="#L14"> 14</a>
+<a href="#L15"> 15</a>
+<a href="#L16"> 16</a>
+<a href="#L17"> 17</a>
+<a href="#L18"> 18</a>
+<a href="#L19"> 19</a>
+<a href="#L20"> 20</a>
+<a href="#L21"> 21</a>
+<a href="#L22"> 22</a>
+<a href="#L23"> 23</a>
+<a href="#L24"> 24</a>
+<a href="#L25"> 25</a>
+<a href="#L26"> 26</a>
+<a href="#L27"> 27</a>
+<a href="#L28"> 28</a>
+<a href="#L29"> 29</a>
+<a href="#L30"> 30</a>
+<a href="#L31"> 31</a>
+<a href="#L32"> 32</a>
+<a href="#L33"> 33</a>
+<a href="#L34"> 34</a>
+<a href="#L35"> 35</a>
+<a href="#L36"> 36</a>
+<a href="#L37"> 37</a>
+<a href="#L38"> 38</a>
+<a href="#L39"> 39</a>
+<a href="#L40"> 40</a>
+<a href="#L41"> 41</a>
+<a href="#L42"> 42</a>
+<a href="#L43"> 43</a>
+<a href="#L44"> 44</a>
+<a href="#L45"> 45</a>
+<a href="#L46"> 46</a>
+<a href="#L47"> 47</a>
+<a href="#L48"> 48</a>
+<a href="#L49"> 49</a>
+<a href="#L50"> 50</a>
+<a href="#L51"> 51</a>
+<a href="#L52"> 52</a>
+<a href="#L53"> 53</a>
+<a href="#L54"> 54</a>
+<a href="#L55"> 55</a>
+<a href="#L56"> 56</a>
+<a href="#L57"> 57</a>
+<a href="#L58"> 58</a>
+<a href="#L59"> 59</a>
+<a href="#L60"> 60</a>
+<a href="#L61"> 61</a>
+<a href="#L62"> 62</a>
+<a href="#L63"> 63</a>
+<a href="#L64"> 64</a>
+<a href="#L65"> 65</a>
+<a href="#L66"> 66</a>
+<a href="#L67"> 67</a>
+<a href="#L68"> 68</a>
+<a href="#L69"> 69</a>
+<a href="#L70"> 70</a>
+<a href="#L71"> 71</a>
+<a href="#L72"> 72</a>
+<a href="#L73"> 73</a>
+<a href="#L74"> 74</a>
+<a href="#L75"> 75</a>
+<a href="#L76"> 76</a>
+<a href="#L77"> 77</a>
+<a href="#L78"> 78</a>
+<a href="#L79"> 79</a>
+<a href="#L80"> 80</a>
+<a href="#L81"> 81</a>
+<a href="#L82"> 82</a>
+<a href="#L83"> 83</a>
+<a href="#L84"> 84</a>
+<a href="#L85"> 85</a>
+<a href="#L86"> 86</a>
+<a href="#L87"> 87</a>
+<a href="#L88"> 88</a>
+<a href="#L89"> 89</a>
+<a href="#L90"> 90</a>
+<a href="#L91"> 91</a>
+<a href="#L92"> 92</a>
+<a href="#L93"> 93</a>
+<a href="#L94"> 94</a>
+<a href="#L95"> 95</a>
+<a href="#L96"> 96</a>
+<a href="#L97"> 97</a>
+<a href="#L98"> 98</a>
+<a href="#L99"> 99</a>
+<a href="#L100">100</a>
+<a href="#L101">101</a>
+<a href="#L102">102</a>
+<a href="#L103">103</a>
+<a href="#L104">104</a>
+<a href="#L105">105</a>
+<a href="#L106">106</a>
+<a href="#L107">107</a>
+<a href="#L108">108</a>
+<a href="#L109">109</a>
+<a href="#L110">110</a>
+<a href="#L111">111</a>
+</pre>
+<pre><code class="ocaml">(** {1 Introduction} *)
+
+(** Grids are two dimensional arrays whose width/height can be changed by adding or removing row/column at either end (one at a time).
+
+    Implemented using the {{: https://github.com/backtracking/flex-array } flex-array library by Jean-Christophe Filliâtre}.
+*)
+
+(** The type of grids. This is an immutable data structure. Values of type ['a t] can be compared using structural equality [=] (provided the elements of type ['a] can). *)
+type +'a t = ('a Flex_array.t) Flex_array.t
+
+(** {1 Using grids } *)
+
+(** [width g] returns the width of [g], that is to say its number of columns. *)
+let width (grid : 'a t) =
+  <span data-count="12">i</span>f Flex_array.lengt<span data-count="12">h</span> grid = 0 then <span data-count="1">0</span> else <span data-count="11">F</span>lex_array.length (Flex_array.ge<span data-count="11">t</span> grid 0)
+
+(** [height g] returns the height of [g], that is to say its number of rows. *)
+let height (grid : 'a t) = <span data-count="12">F</span>lex_array.length grid
+
+(** [dim g] returns a pair in which the first element is the width of [g] and the second one its height. *)
+let dim (grid : 'a t) =
+  <span data-count="3">l</span>et height = Flex_array.length grid in
+  <span data-count="3">i</span>f height = 0 then <span data-count="1">0</span>, 0
+  else <span data-count="2">F</span>lex_array.lengt<span data-count="2">h</span> (Flex_array.ge<span data-count="2">t</span> grid 0), height
+
+(** [get g ~x ~y] returns the element at width-index [~x] and height-index [~y] in grid [g]. Index start at 0. *)
+let get (grid : 'a t) ~x ~y =
+  <span data-count="24">l</span>et row = Flex_array.get grid y in
+  <span data-count="24">F</span>lex_array.get row x
+
+(** [get_row g y] returns the row at height-index [y] in grid [g]. Index start at 0. *)
+let get_row (grid : 'a t) y =
+  <span data-count="1">F</span>lex_array.get grid y
+
+(** [get_col g x] returns the column at width-index [x] in grid [g]. Index start at 0. *)
+let get_col (grid : 'a t) y =
+  <span data-count="1">F</span>lex_array.map (fun row -&gt; <span data-count="2">F</span>lex_array.get row y) grid
+
+(** {1 Building grids } *)
+
+(**  The empty grid. *)
+let empty : 'a t = Flex_array.empty
+
+(** [of_array a] returns a grid from the two dimensional array [a] with the same height, width and order. *)
+let of_array a : 'a t =
+  <span data-count="1">F</span>lex_array.of_array (Array.ma<span data-count="1">p</span> Flex_array.of_array a)
+
+(** [of_list l] returns a grid from the two dimensional list [l] with the same height, width and order. *)
+let of_list l : 'a t =
+  <span data-count="1">F</span>lex_array.of_list (List.ma<span data-count="1">p</span> Flex_array.of_list l)
+
+(** [set g ~x ~y v] returns a new grid where all elements are identical to those of [g], except at width-index [x] and height-index [y] where the element is [v]. *)
+let set (grid : 'a t) ~x ~y v : 'a t =
+  <span data-count="2">l</span>et row = Flex_array.get grid y in
+  <span data-count="2">l</span>et row = Flex_array.set row x v in
+  <span data-count="2">F</span>lex_array.set grid y row
+
+(** [cons_row row grid] returns a new grid obtained by appending the row [row] at the height-axis front of grid [g]. *)
+let cons_row row (grid: 'a t) : 'a t = <span data-count="1">F</span>lex_array.cons row grid
+
+(** [snow_row grid row] returns a new grid obtained by appending the row [row] at the height-axis end of grid [g]. *)
+let snoc_row (grid : 'a t) row : 'a t = <span data-count="1">F</span>lex_array.snoc grid row
+
+(** [cons_col col grid] returns a new grid obtained by appending the column [col] at the width-axis front of grid [g]. *)
+let cons_col col (grid : 'a t) : 'a t =
+  <span data-count="1">i</span>f grid = empty then <span data-count="0">F</span>lex_array.map (fun el -&gt; <span data-count="0">F</span>lex_array.cons el Flex_array.empty) col
+  else <span data-count="1">F</span>lex_array.mapi (fun i row -&gt; <span data-count="2">F</span>lex_array.cons (Flex_array.ge<span data-count="2">t</span> col i) row) grid
+
+(** [snow_col grid col] returns a new grid obtained by appending the column [col] at the width-axis end of grid [g]. *)
+let snoc_col (grid : 'a t) col : 'a t =
+  <span data-count="1">i</span>f grid = empty then <span data-count="0">F</span>lex_array.map (fun el -&gt; <span data-count="0">F</span>lex_array.cons el Flex_array.empty) col
+  else <span data-count="1">F</span>lex_array.mapi (fun i row -&gt; <span data-count="2">F</span>lex_array.snoc row (Flex_array.ge<span data-count="2">t</span> col i)) grid
+
+(** [tail_row g] returns a new grid obtained by removing the row at the height-axis front of grid [g]. *)
+let tail_row (grid : 'a t) : 'a t = <span data-count="1">F</span>lex_array.tail grid
+
+(** [liat_row g] returns a new grid obtained by removing the row at the height-axis end of grid [g]. *)
+let liat_row (grid : 'a t) : 'a t = <span data-count="1">F</span>lex_array.liat grid
+
+(** [tail_col g] returns a new grid obtained by removing the column at the width-axis front of grid [g]. *)
+let tail_col (grid : 'a t) : 'a t = <span data-count="1">F</span>lex_array.map Flex_array.tail grid
+
+(** [liat_col g] returns a new grid obtained by removing the column at the width-axis end of grid [g]. *)
+let liat_col (grid : 'a t) : 'a t = <span data-count="1">F</span>lex_array.map Flex_array.liat grid
+
+(** {1 Iterators} *)
+
+(** [iter f g] applies function [f] in turn to all the elements of [g]. It goes row by row. It is equivalent to [f (get g ~x:0 ~y:0); f (get g ~x:1 ~y:0); ...; f (get g ~x:(w - 1) ~y:0); ...; f (get g ~x:0 ~y:(h - 1)); f (get g ~x:1 ~y:(h -1)); ...; f (get g ~x:(w - 1) ~y:(h - 1))] where [w] and [h] are respectively the width and the height of [g] but runs faster. *)
+let iter f (grid : 'a t) =
+  <span data-count="1">F</span>lex_array.iter (Flex_array.ite<span data-count="1">r</span> f) grid
+
+(** Same as {!iter}, but the function is applied with the width-index and height-index of the element as first and second argument, and the element itself as third argument. *)
+let iteri f (grid : 'a t) =
+  <span data-count="1">F</span>lex_array.iteri (fun y row -&gt; <span data-count="2">F</span>lex_array.iteri (fun x v -&gt; <span data-count="6">f</span> ~x ~y v) row) grid
+
+(** [map f g] returns a grid with the same dimension than [g] but where each element [x] has been replaced by the value of [f x]. *)
+let map f (grid : 'a t) : 'b t =
+  <span data-count="1">F</span>lex_array.map (Flex_array.ma<span data-count="1">p</span> f) grid
+
+(** Same as {!map}, but the function is applied with the width-index and height-index of the element as first and second arguement, and the element itself as third argument. *)
+let mapi f (grid : 'a t) : 'b t =
+  <span data-count="1">F</span>lex_array.mapi (fun x row -&gt; <span data-count="2">F</span>lex_array.mapi (fun y v -&gt; <span data-count="6">f</span> ~x ~y v) row) grid
+
+(** [fold f acc g] computes [Flex_array.fold (Flex_array.fold f) acc g]. *)
+let fold f acc grid =
+  <span data-count="0">F</span>lex_array.fold (Flex_array.fol<span data-count="0">d</span> f) acc grid
+
+(** [pp ?pp_sep_row ?pp_sep_col pp_v fmt g] prints items of grid [g] using [pp_v]
+    to print each item, calling [pp_sep_row] between rows and [pp_sep_col] between items (i.e. between each column). [pp_sep_row] defaults to {!Format.pp_print_cut} and [pp_print_col] defaults to [fun fmt () -&gt; Format.fprintf fmt ";"]. Does nothing on empty grids. *)
+let pp ?(pp_sep_row = <span data-count="1">F</span>ormat.pp_print_newline) ?(pp_sep_col = <span data-count="1">(</span>fun fmt () -&gt; <span data-count="4">F</span>ormat.fprintf fmt ";")) pp_v fmt (grid : 'a t) =
+  <span data-count="1">F</span>lex_array.pp ~pp_sep:pp_sep_row (fun fmt el -&gt; <span data-count="2">F</span>lex_array.pp ~pp_sep:pp_sep_col pp_v fmt el) fmt grid
+</code></pre>
+      </div>
+    </div>
+    <script src="../coverage.js"></script>
+  </body>
+</html>
