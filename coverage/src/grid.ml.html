@@ -481,7 +481,7 @@ let mapi f (grid : 'a t) : 'b t =
   <span data-count="1">F</span>lex_array.mapi (fun x row -&gt; <span data-count="2">F</span>lex_array.mapi (fun y v -&gt; <span data-count="6">f</span> ~x ~y v) row) grid
 
 (** [fold f acc g] computes [Flex_array.fold (Flex_array.fold f) acc g]. *)
-let fold f acc grid = <span data-count="1">F</span>lex_array.fold (Flex_array.fol<span data-count="1">d</span> f) acc grid
+let fold f acc (grid : 'a t) = <span data-count="1">F</span>lex_array.fold (Flex_array.fol<span data-count="1">d</span> f) acc grid
 
 (** [pp ?pp_sep_row ?pp_sep_col pp_v fmt g] prints items of grid [g] using
     [pp_v] to print each item, calling [pp_sep_row] between rows and
