@@ -70,13 +70,13 @@ let pred =
   ; get grid ~x:0 ~y:0 = 1
   ; get grid ~x:2 ~y:1 = 6
   ; (let buf = Buffer.create 6 in
-    let fmt = Format.formatter_of_buffer buf in
-    let () = iter (fun x -> Format.fprintf fmt "%d@." x) grid in
-    String.equal (Buffer.contents buf) "1\n2\n3\n4\n5\n6\n")
+     let fmt = Format.formatter_of_buffer buf in
+     let () = iter (fun x -> Format.fprintf fmt "%d@." x) grid in
+     String.equal (Buffer.contents buf) "1\n2\n3\n4\n5\n6\n" )
   ; (let buf = Buffer.create 6 in
-    let fmt = Format.formatter_of_buffer buf in
-    let () = iteri (fun ~x ~y -> Format.fprintf fmt "%d%d%d@." x y) grid in
-    String.equal (Buffer.contents buf) "001\n102\n203\n014\n115\n216\n")
+     let fmt = Format.formatter_of_buffer buf in
+     let () = iteri (fun ~x ~y -> Format.fprintf fmt "%d%d%d@." x y) grid in
+     String.equal (Buffer.contents buf) "001\n102\n203\n014\n115\n216\n" )
   ]
 
 let () = List.iter (fun p -> assert p) pred
@@ -182,12 +182,12 @@ let () = List.iter (fun p -> assert p) pred
 
 let grid = of_array [| [| 1; 1; 1 |]; [| 1; 1; 1 |] |]
 
-let grid = mapi (fun ~x ~y _v -> 3 * y + x) grid
+let grid = mapi (fun ~x ~y _v -> (3 * y) + x) grid
 
-let pred = [
-  String.equal
-    (Format.asprintf "%a" (pp Format.pp_print_int) grid)
-    "0;1;2\n3;4;5"
-]
+let pred =
+  [ String.equal
+      (Format.asprintf "%a" (pp Format.pp_print_int) grid)
+      "0;1;2\n3;4;5"
+  ]
 
 let () = List.iter (fun p -> assert p) pred

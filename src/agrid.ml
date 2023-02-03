@@ -1,7 +1,7 @@
 (** {1 Introduction} *)
 
-(** Adjustable grids are two dimensional arrays whose width/height can be changed by adding
-    or removing row/column at either end (one at a time).
+(** Adjustable grids are two dimensional arrays whose width/height can be
+    changed by adding or removing row/column at either end (one at a time).
 
     Implemented using the {{:https://github.com/backtracking/flex-array}
     flex-array library by Jean-Christophe Filliâtre}. *)
@@ -15,10 +15,8 @@ type +'a t = 'a Flex_array.t Flex_array.t
 
 (** [width g] returns the width of [g], that is to say its number of columns. *)
 let width (grid : 'a t) =
-  if Flex_array.length grid = 0 then
-    0
-  else
-    Flex_array.length (Flex_array.get grid 0)
+  if Flex_array.length grid = 0 then 0
+  else Flex_array.length (Flex_array.get grid 0)
 
 (** [height g] returns the height of [g], that is to say its number of rows. *)
 let height (grid : 'a t) = Flex_array.length grid
@@ -27,10 +25,8 @@ let height (grid : 'a t) = Flex_array.length grid
     the second one its height. *)
 let dim (grid : 'a t) =
   let height = Flex_array.length grid in
-  if height = 0 then
-    (0, 0)
-  else
-    (Flex_array.length (Flex_array.get grid 0), height)
+  if height = 0 then (0, 0)
+  else (Flex_array.length (Flex_array.get grid 0), height)
 
 (** [get g ~x ~y] returns the element at width-index [~x] and height-index [~y]
     in grid [g]. Index start at 0. *)
@@ -118,8 +114,9 @@ let liat_col (grid : 'a t) : 'a t = Flex_array.map Flex_array.liat grid
     row by row. It is equivalent to
     [f (get g ~x:0 ~y:0); f (get g ~x:1 ~y:0); ...; f (get g ~x:(w - 1) ~y:0);
     ...; f (get g ~x:0 ~y:(h - 1)); f (get g ~x:1 ~y:(h -1)); ...; f (get g
-    ~x:(w - 1) ~y:(h - 1))] where [w] and [h] are respectively the width and the
-    height of [g] but runs faster. *)
+    ~x:(w - 1) ~y:(h - 1))]
+    where [w] and [h] are respectively the width and the height of [g] but runs
+    faster. *)
 let iter f (grid : 'a t) = Flex_array.iter (Flex_array.iter f) grid
 
 (** Same as {!iter}, but the function is applied with the width-index and
@@ -149,8 +146,7 @@ let fold f acc (grid : 'a t) = Flex_array.fold (Flex_array.fold f) acc grid
     to {!Format.pp_print_cut} and [pp_print_col] defaults to
     [fun fmt () -> Format.fprintf fmt ";"]. Does nothing on empty grids. *)
 let pp ?(pp_sep_row = Format.pp_print_newline)
-    ?(pp_sep_col = fun fmt () -> Format.fprintf fmt ";") pp_v fmt (grid : 'a t)
-    =
+   ?(pp_sep_col = fun fmt () -> Format.fprintf fmt ";") pp_v fmt (grid : 'a t) =
   Flex_array.pp ~pp_sep:pp_sep_row
     (fun fmt el -> Flex_array.pp ~pp_sep:pp_sep_col pp_v fmt el)
     fmt grid
