@@ -1,4 +1,6 @@
-(lang dune 2.7)
+(lang dune 3.0)
+
+(using mdx 0.2)
 
 (name agrid)
 
@@ -21,12 +23,14 @@
  (depends
   (ocaml
    (>= 4.05))
-  (dune
-   (>= 2.7))
   (flex-array
    (>= 1.2))
   (bisect_ppx
    (and
     :with-test
     (>= "2.6")
-    :dev))))
+    :dev))
+  (mdx
+   (and
+    :with-test
+    (>= "2.1")))))

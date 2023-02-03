@@ -9,10 +9,11 @@ license: "ISC"
 homepage: "https://github.com/ocamlpro/agrid"
 bug-reports: "https://github.com/ocamlpro/agrid/issues"
 depends: [
+  "dune" {>= "3.0"}
   "ocaml" {>= "4.05"}
-  "dune" {>= "2.7" & >= "2.7"}
   "flex-array" {>= "1.2"}
   "bisect_ppx" {with-test & >= "2.6" & dev}
+  "mdx" {with-test & >= "2.1"}
   "odoc" {with-doc}
 ]
 build: [

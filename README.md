@@ -6,18 +6,18 @@ agrid is an [OCaml] library for adjustable grids. Adjustable grids are two dimen
 
 ## Quickstart
 
-You should depend on `agrid` then :
+You should depend on `agrid` and `flex-array` then :
 
 ```ocaml
-let () =
-  let grid = Agrid.of_list [[1; 2]; [3; 4]] in
-  let grid = Agrid.snoc_row grid (Flex_array.of_list [5; 6]) in
-  Agrid.pp Format.pp_print_int Format.std_formatter grid
-  (* prints:
-   * 1; 2
-   * 3; 4
-   * 5; 6
-   *)
+# let grid = Agrid.of_list [[1; 2]; [3; 4]];;
+val grid : int Agrid.t = <abstr>
+# let grid = Agrid.snoc_row grid (Flex_array.of_list [5; 6]);;
+val grid : int Agrid.t = <abstr>
+# Format.printf "%a@." (Agrid.pp Format.pp_print_int) grid;;
+1;2
+3;4
+5;6
+- : unit = ()
 ```
 
 For more, have a look at the [example] folder or at the [documentation].
