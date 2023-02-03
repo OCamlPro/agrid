@@ -138,7 +138,7 @@ let map f (grid : 'a t) : 'b t = Flex_array.map (Flex_array.map f) grid
     height-index of the element as first and second arguement, and the element
     itself as third argument. *)
 let mapi f (grid : 'a t) : 'b t =
-  Flex_array.mapi (fun x row -> Flex_array.mapi (fun y v -> f ~x ~y v) row) grid
+  Flex_array.mapi (fun y row -> Flex_array.mapi (fun x v -> f ~x ~y v) row) grid
 
 (** [fold f acc g] computes [Flex_array.fold (Flex_array.fold f) acc g]. *)
 let fold f acc (grid : 'a t) = Flex_array.fold (Flex_array.fold f) acc grid
