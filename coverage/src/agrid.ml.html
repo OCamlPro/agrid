@@ -395,7 +395,7 @@ let empty : 'a t = Flex_array.empty
 
 (** [of_array a] returns a grid from the two dimensional array [a] with the same
     height, width and order. *)
-let of_array a : 'a t = <span data-count="1">F</span>lex_array.of_array (Array.ma<span data-count="1">p</span> Flex_array.of_array a)
+let of_array a : 'a t = <span data-count="2">F</span>lex_array.of_array (Array.ma<span data-count="2">p</span> Flex_array.of_array a)
 
 (** [of_list l] returns a grid from the two dimensional list [l] with the same
     height, width and order. *)
@@ -479,7 +479,7 @@ let map f (grid : 'a t) : 'b t = <span data-count="1">F</span>lex_array.map (Fle
     height-index of the element as first and second arguement, and the element
     itself as third argument. *)
 let mapi f (grid : 'a t) : 'b t =
-  <span data-count="1">F</span>lex_array.mapi (fun y row -&gt; <span data-count="2">F</span>lex_array.mapi (fun x v -&gt; <span data-count="6">f</span> ~x ~y v) row) grid
+  <span data-count="2">F</span>lex_array.mapi (fun y row -&gt; <span data-count="4">F</span>lex_array.mapi (fun x v -&gt; <span data-count="12">f</span> ~x ~y v) row) grid
 
 (** [fold f acc g] computes [Flex_array.fold (Flex_array.fold f) acc g]. *)
 let fold f acc (grid : 'a t) = <span data-count="1">F</span>lex_array.fold (Flex_array.fol<span data-count="1">d</span> f) acc grid
@@ -489,11 +489,11 @@ let fold f acc (grid : 'a t) = <span data-count="1">F</span>lex_array.fold (Flex
     [pp_sep_col] between items (i.e. between each column). [pp_sep_row] defaults
     to {!Format.pp_print_cut} and [pp_print_col] defaults to
     [fun fmt () -&gt; Format.fprintf fmt ";"]. Does nothing on empty grids. *)
-let pp ?(pp_sep_row = <span data-count="1">F</span>ormat.pp_print_newline)
-    ?(pp_sep_col = <span data-count="1">f</span>un fmt () -&gt; <span data-count="4">F</span>ormat.fprintf fmt ";") pp_v fmt (grid : 'a t)
+let pp ?(pp_sep_row = <span data-count="2">F</span>ormat.pp_print_newline)
+    ?(pp_sep_col = <span data-count="2">f</span>un fmt () -&gt; <span data-count="8">F</span>ormat.fprintf fmt ";") pp_v fmt (grid : 'a t)
     =
-  <span data-count="1">F</span>lex_array.pp ~pp_sep:pp_sep_row
-    (fun fmt el -&gt; <span data-count="2">F</span>lex_array.pp ~pp_sep:pp_sep_col pp_v fmt el)
+  <span data-count="2">F</span>lex_array.pp ~pp_sep:pp_sep_row
+    (fun fmt el -&gt; <span data-count="4">F</span>lex_array.pp ~pp_sep:pp_sep_col pp_v fmt el)
     fmt grid
 </code></pre>
       </div>
